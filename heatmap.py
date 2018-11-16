@@ -90,8 +90,7 @@ def randomWalk(i,j):
 			counter += 1
 			if( checkFall(i,j) ):
 				break
-
-			
+		
 
 		elif (x == 4):
 			counter += 1
@@ -129,8 +128,6 @@ def randomWalk(i,j):
 				break
 
 
-		a[i][j] = 1
-
 	#print "number of steps is %d\n" % counter
 	return counter
 
@@ -143,12 +140,9 @@ def randomWalk(i,j):
 def NorthEdge(i,j,numTrials):
 	#a = np.arange(100).reshape(rows,columns)
 
-	start_i = i
-	start_j = j
-
 	counter   = 0
 	n_counter = 0
-	stepsize  = 50
+	stepsize  = 5
 
 	for itr in range (stepsize):
 		x = random.randint(0, 8)
@@ -165,8 +159,6 @@ def NorthEdge(i,j,numTrials):
 			elif ( (j < 0) or (i > length) or (j > length) ):
 				print ("fell")
 
-			else:
-		        	a[i][j] = 1
 
 		elif (x == 1):
 			i = i - 1
@@ -180,8 +172,6 @@ def NorthEdge(i,j,numTrials):
 			elif ( (j < 0) or (i > length) or (j > length) ):
 				print ("fell")
 
-			else:
-		        	a[i][j] = 1
 
 		elif (x == 2):
 			i = i - 1
@@ -196,8 +186,6 @@ def NorthEdge(i,j,numTrials):
 			elif ( (j < 0) or (i > length) or (j > length) ):
 				print ("fell")
 
-			else:
-		        	a[i][j] = 1
 
 		elif (x == 3):
 			j = j - 1
@@ -211,8 +199,7 @@ def NorthEdge(i,j,numTrials):
 			elif ( (j < 0) or (i > length) or (j > length) ):
 				print ("fell")
 
-			else:
-		        	a[i][j] = 1
+
 			
 
 		elif (x == 4):
@@ -226,8 +213,7 @@ def NorthEdge(i,j,numTrials):
 			elif ( (j < 0) or (i > length) or (j > length) ):
 				print ("fell")
 
-			else:
-		        	a[i][j] = 1
+
 			
 		elif (x == 5):
 			j = j + 1
@@ -241,8 +227,7 @@ def NorthEdge(i,j,numTrials):
 			elif ( (j < 0) or (i > length) or (j > length) ):
 				print ("fell")
 
-			else:
-		        	a[i][j] = 1
+
 
 		elif (x == 6):
 			i = i + 1
@@ -257,8 +242,7 @@ def NorthEdge(i,j,numTrials):
 			elif ( (j < 0) or (i > length) or (j > length) ):
 				print ("fell")
 
-			else:
-		        	a[i][j] = 1
+	
 
 		elif (x == 7):
 			i = i + 1
@@ -272,8 +256,7 @@ def NorthEdge(i,j,numTrials):
 			elif ( (j < 0) or (i > length) or (j > length) ):
 				print ("fell")
 
-			else:
-		        	a[i][j] = 1
+	
 
 		elif (x == 8):
 			i = i + 1
@@ -288,8 +271,7 @@ def NorthEdge(i,j,numTrials):
 			elif ( (j < 0) or (i > length) or (j > length) ):
 				print ("fell")
 
-			else:
-		        	a[i][j] = 1
+	
 
 	#print "number of steps is %d\n" % counter
 	#returns a tuple
@@ -304,207 +286,7 @@ def NorthEdge(i,j,numTrials):
 
 
 
-#====================================================================================
 
-def bonusWalk(i,j):
-	#a = np.arange(100).reshape(rows,columns)
-	counter = 0
-	stepsize = 5000
-	stop = False
-
-	for itr in range (stepsize):
-		x = random.randint(0, 8)
-		
-		if (x == 0):
-			i = i-1
-			j = j-1
-			counter += 1
-			if (i < 0):
-				i = i+1
-				stop = True
-			if(j < 0):
-				j = j+1
-				stop = True
-			if (i > 7):
-				i = i-1 
-				stop = True
-			if (j > 7):
-				j = j-1
-				stop = True
-		        
-			if (stop == True): 
-				bonusMatrix[i][j] = counter
-				break
-
-		elif (x == 1):
-			i = i - 1
-			counter += 1
-			if (i < 0):
-				i = i+1
-				stop = True
-			if(j < 0):
-				j = j+1
-				stop = True
-			if (i > 7):
-				i = i-1 
-				stop = True
-			if (j > 7):
-				j = j-1
-				stop = True
-		        
-			if (stop == True): 
-				bonusMatrix[i][j] = counter
-				break
-			
-
-		elif (x == 2):
-			i = i - 1
-			j = j + 1
-			counter += 1
-			if (i < 0):
-				i = i+1
-				stop = True
-			if(j < 0):
-				j = j+1
-				stop = True
-			if (i > 7):
-				i = i-1 
-				stop = True
-			if (j > 7):
-				j = j-1
-				stop = True
-		        
-			if (stop == True): 
-				bonusMatrix[i][j] = counter
-				break
-			
-
-		elif (x == 3):
-			j = j - 1
-			counter += 1
-			if (i < 0):
-				i = i+1
-				stop = True
-			if(j < 0):
-				j = j+1
-				stop = True
-			if (i > 7):
-				i = i-1 
-				stop = True
-			if (j > 7):
-				j = j-1
-				stop = True
-		        
-			if (stop == True): 
-				bonusMatrix[i][j] = counter
-				break
-			
-
-		elif (x == 4):
-			counter += 1
-			if (i < 0):
-				i = i+1
-				stop = True
-			if(j < 0):
-				j = j+1
-				stop = True
-			if (i > 7):
-				i = i-1 
-				stop = True
-			if (j > 7):
-				j = j-1
-				stop = True
-		        
-			if (stop == True): 
-				bonusMatrix[i][j] = counter
-				break
-			
-			
-		elif (x == 5):
-			j = j + 1
-			counter += 1
-			if (i < 0):
-				i = i+1
-				stop = True
-			if(j < 0):
-				j = j+1
-				stop = True
-			if (i > 7):
-				i = i-1 
-				stop = True
-			if (j > 7):
-				j = j-1
-				stop = True
-		        
-			if (stop == True): 
-				bonusMatrix[i][j] = counter
-				break
-			
-
-		elif (x == 6):
-			i = i + 1
-			j = j - 1
-			counter += 1
-			if (i < 0):
-				i = i+1
-				stop = True
-			if(j < 0):
-				j = j+1
-				stop = True
-			if (i > 7):
-				i = i-1 
-				stop = True
-			if (j > 7):
-				j = j-1
-				stop = True
-		        
-			if (stop == True): 
-				bonusMatrix[i][j] = counter
-				break
-			
-
-		elif (x == 7):
-			i = i + 1
-			counter += 1
-			if (i < 0):
-				i = i+1
-				stop = True
-			if(j < 0):
-				j = j+1
-				stop = True
-			if (i > 7):
-				i = i-1 
-				stop = True
-			if (j > 7):
-				j = j-1
-				stop = True
-		        
-			if (stop == True): 
-				bonusMatrix[i][j] = counter
-				break
-			
-
-		elif (x == 8):
-			i = i + 1
-			j = j + 1
-			counter += 1
-			if (i < 0):
-				i = i+1
-				stop = True
-			if(j < 0):
-				j = j+1
-				stop = True
-			if (i > 7):
-				i = i-1 
-				stop = True
-			if (j > 7):
-				j = j-1
-				stop = True
-		        
-			if (stop == True): 
-				bonusMatrix[i][j] = counter
-				break
-			
 
 # Just a test function for hard coded values
 def bonus():
@@ -541,7 +323,7 @@ def runMultipleSimulations(i, j):
 
 	averages = []
 	probabilities = []
-	numTrials = 50
+	numTrials = 5
 
 	print ("i and j: %s %s" % (i,j))
 
@@ -549,10 +331,10 @@ def runMultipleSimulations(i, j):
 
 		b = randomWalk(i,j) 
 
-		a = NorthEdge(i,j,numTrials)
+		ne_counter = NorthEdge(i,j,numTrials)
 			
 		averages.append(b) #store all the expected values in an array, then compute the average
-		probabilities.append(a[1])
+		probabilities.append(ne_counter[1])
 
 	 
 	average = ( sum( int (n) for n in averages ) ) / numTrials
