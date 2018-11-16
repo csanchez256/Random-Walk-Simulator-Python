@@ -46,6 +46,12 @@ probabilityTable = np.arange(100).reshape(rows,columns)
 
 plt.imshow(expectedNumTable, cmap = 'hot' ,interpolation='nearest')
 
+# function that prints a falling off the grid
+def checkFall(i, j):
+	if( (i < 0) or (j < 0) or (i > length) or (j > length) ):
+				print ("fall!\n")
+				return True
+
 
 # function that starts walk
 def randomWalk(i,j):
@@ -60,87 +66,68 @@ def randomWalk(i,j):
 			i = i-1
 			j = j-1
 			counter += 1
-			if( (i < 0) or (j < 0) or (i > length) or (j > length) ):
-				print ("fall!\n")
+			if( checkFall(i,j) ):
 				break
-			else:
-		        	a[i][j] = 1	
+
 
 		elif (x == 1):
 			i = i - 1
 			counter += 1
-			if( i < 0 or j < 0 or i > length or j > length ):
-				print ("fall!\n")
+			if( checkFall(i,j) ):
 				break
-			else:
-				a[i][j] = 1
 
 		elif (x == 2):
 			i = i - 1
 			j = j + 1
 			counter += 1
-			if( i < 0 or j < 0 or i > length or j > length ):
-				print ("fall!\n")
+			if( checkFall(i,j) ):
 				break
-			else:
-				a[i][j] = 1
+	
 
 		elif (x == 3):
 			j = j - 1
 			counter += 1
-			if( i < 0 or j < 0 or i > length or j > length ):
-				print ("fall!\n")
+			if( checkFall(i,j) ):
 				break
-			else:
-				a[i][j] = 1
+	
 			
 
 		elif (x == 4):
 			counter += 1
-			if( i < 0 or j < 0 or i > length or j > length ):
-				print ("fall!\n")
+			if( checkFall(i,j) ):
 				break
-			else:
-				a[i][j] = 1
-			
+
 		elif (x == 5):
 			j = j + 1
 			counter += 1
-			if( i < 0 or j < 0 or i > length or j > length ):
-				print ("fall!\n")
+			if( checkFall(i,j) ):
 				break
-			else:
-				a[i][j] = 1
+
 
 		elif (x == 6):
 			i = i + 1
 			j = j - 1
 			counter += 1
-			if( i < 0 or j < 0 or i > length or j > length ):
-				print ("fall!\n")
+			if( checkFall(i,j) ):
 				break
-			else:
-				a[i][j] = 1
+
 
 		elif (x == 7):
 			i = i + 1
 			counter += 1
-			if( i < 0 or j < 0 or i > length or j > length ):
-				print ("fall!\n")
+			if( checkFall(i,j) ):
 				break
-			else:
-				a[i][j] = 1
+
 
 		elif (x == 8):
 			i = i + 1
 			j = j + 1
 			counter += 1
-			if( i < 0 or j < 0 or i > length or j > length ):
-				print ("fall!\n")
+			if( checkFall(i,j) ):
 				break
-			else:
-				a[i][j] = 1
 
+		a[i][j] = 1
+		
 	#print "number of steps is %d\n" % counter
 	return counter
 
