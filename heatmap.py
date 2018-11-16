@@ -68,7 +68,7 @@ def randomWalk(i,j):
 			counter += 1
 			if( checkFall(i,j) ):
 				break
-
+	
 
 		elif (x == 1):
 			i = i - 1
@@ -76,20 +76,21 @@ def randomWalk(i,j):
 			if( checkFall(i,j) ):
 				break
 
+
 		elif (x == 2):
 			i = i - 1
 			j = j + 1
 			counter += 1
 			if( checkFall(i,j) ):
 				break
-	
+
 
 		elif (x == 3):
 			j = j - 1
 			counter += 1
 			if( checkFall(i,j) ):
 				break
-	
+
 			
 
 		elif (x == 4):
@@ -97,6 +98,7 @@ def randomWalk(i,j):
 			if( checkFall(i,j) ):
 				break
 
+			
 		elif (x == 5):
 			j = j + 1
 			counter += 1
@@ -126,8 +128,9 @@ def randomWalk(i,j):
 			if( checkFall(i,j) ):
 				break
 
+
 		a[i][j] = 1
-		
+
 	#print "number of steps is %d\n" % counter
 	return counter
 
@@ -538,7 +541,7 @@ def runMultipleSimulations(i, j):
 
 	averages = []
 	probabilities = []
-	numTrials = 5
+	numTrials = 50
 
 	print ("i and j: %s %s" % (i,j))
 
