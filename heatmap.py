@@ -55,7 +55,7 @@ def checkFall(i, j):
 
 # function that starts walk
 def randomWalk(i,j):
-	#a = np.arange(100).reshape(rows,columns)
+
 	counter = 0
 	stepsize = 50
 
@@ -138,7 +138,6 @@ def randomWalk(i,j):
 
 # function that starts walk
 def NorthEdge(i,j,numTrials):
-	#a = np.arange(100).reshape(rows,columns)
 
 	counter   = 0
 	n_counter = 0
@@ -152,7 +151,7 @@ def NorthEdge(i,j,numTrials):
 			j = j-1
 			counter += 1
 			if(checkFall(i,j)):
-				n_counter = n_counter + 1
+				n_counter += 1
 				break;
 
 
@@ -161,7 +160,7 @@ def NorthEdge(i,j,numTrials):
 			counter += 1
 
 			if(checkFall(i,j)):
-				n_counter = n_counter + 1
+				n_counter += 1
 				break;
 
 
@@ -171,7 +170,7 @@ def NorthEdge(i,j,numTrials):
 			counter += 1
 
 			if(checkFall(i,j)):
-				n_counter = n_counter + 1
+				n_counter += 1
 				break;
 
 
@@ -180,7 +179,7 @@ def NorthEdge(i,j,numTrials):
 			counter += 1
 
 			if(checkFall(i,j)):
-				n_counter = n_counter + 1
+				n_counter += 1
 				break;
 			
 
@@ -188,7 +187,7 @@ def NorthEdge(i,j,numTrials):
 			counter += 1
 
 			if(checkFall(i,j)):
-				n_counter = n_counter + 1
+				n_counter += 1
 				break;
 
 			
@@ -197,7 +196,7 @@ def NorthEdge(i,j,numTrials):
 			counter += 1
 
 			if(checkFall(i,j)):
-				n_counter = n_counter + 1
+				n_counter += 1
 				break;
 
 
@@ -207,7 +206,7 @@ def NorthEdge(i,j,numTrials):
 			counter += 1
 
 			if(checkFall(i,j)):
-				n_counter = n_counter + 1
+				n_counter += 1
 				break;
 
 
@@ -216,7 +215,7 @@ def NorthEdge(i,j,numTrials):
 			counter += 1
 
 			if(checkFall(i,j)):
-				n_counter = n_counter + 1
+				n_counter += 1
 				break;
 
 
@@ -226,7 +225,7 @@ def NorthEdge(i,j,numTrials):
 			counter += 1
 
 			if(checkFall(i,j)):
-				n_counter = n_counter + 1
+				n_counter += 1
 				break;
 
 
@@ -235,19 +234,6 @@ def NorthEdge(i,j,numTrials):
 	#returns a tuple
 	return counter, n_counter
 
-
-
-# Just a test function for hard coded values
-def bonus():
-	print ('index of bonus matrix %d\n' % bonusMatrix[2][4])
-	#bonusMatrix[2][4] = bonusWalk(2,4)
-
-	trials = 50
-	for itr in range (trials):
-		bonusWalk(2,4)
-
-	for row in bonusMatrix:
-		print(row)
 
 
 # This function is the driver. It iterates every index in the board.	
@@ -272,7 +258,7 @@ def runMultipleSimulations(i, j):
 
 	averages = []
 	probabilities = []
-	numTrials = 500
+	numTrials = 50
 
 	print ("i and j: %s %s" % (i,j))
 
@@ -298,17 +284,11 @@ def runMultipleSimulations(i, j):
 #==========================================================================================
 
 
-#testTrial()
 simulation()
 
-#bonus()
 
 #this is to shift axis' ticks to line up with squares
 ax = plt.gca();
-#ax.set_yticks(np.arange(-.5, 10, 1));
-#ax.set_yticklabels(np.arange(1, 11, 1));
-
-#eliminates x ticks
 ax.set(xticks=[] )
 
 plt.show()
