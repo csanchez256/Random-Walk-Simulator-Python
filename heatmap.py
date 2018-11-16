@@ -142,7 +142,7 @@ def NorthEdge(i,j,numTrials):
 
 	counter   = 0
 	n_counter = 0
-	stepsize  = 5
+	stepsize  = 50
 
 	for itr in range (stepsize):
 		x = random.randint(0, 8)
@@ -151,26 +151,18 @@ def NorthEdge(i,j,numTrials):
 			i = i-1
 			j = j-1
 			counter += 1
-			if(i < 0):
-				print ("fall")
+			if(checkFall(i,j)):
 				n_counter = n_counter + 1
 				break;
-
-			elif ( (j < 0) or (i > length) or (j > length) ):
-				print ("fell")
 
 
 		elif (x == 1):
 			i = i - 1
 			counter += 1
 
-			if(i < 0):
-				print ("fall")
+			if(checkFall(i,j)):
 				n_counter = n_counter + 1
 				break;
-
-			elif ( (j < 0) or (i > length) or (j > length) ):
-				print ("fell")
 
 
 		elif (x == 2):
@@ -178,55 +170,35 @@ def NorthEdge(i,j,numTrials):
 			j = j + 1
 			counter += 1
 
-			if(i < 0):
-				print ("fall")
+			if(checkFall(i,j)):
 				n_counter = n_counter + 1
 				break;
-
-			elif ( (j < 0) or (i > length) or (j > length) ):
-				print ("fell")
 
 
 		elif (x == 3):
 			j = j - 1
 			counter += 1
 
-			if(i < 0):
-				print ("fall")
+			if(checkFall(i,j)):
 				n_counter = n_counter + 1
 				break;
-
-			elif ( (j < 0) or (i > length) or (j > length) ):
-				print ("fell")
-
-
 			
 
 		elif (x == 4):
 			counter += 1
 
-			if(i < 0):
-				print ("fall")
+			if(checkFall(i,j)):
 				n_counter = n_counter + 1
 				break;
-
-			elif ( (j < 0) or (i > length) or (j > length) ):
-				print ("fell")
-
 
 			
 		elif (x == 5):
 			j = j + 1
 			counter += 1
 
-			if(i < 0):
-				print ("fall")
+			if(checkFall(i,j)):
 				n_counter = n_counter + 1
 				break;
-
-			elif ( (j < 0) or (i > length) or (j > length) ):
-				print ("fell")
-
 
 
 		elif (x == 6):
@@ -234,57 +206,34 @@ def NorthEdge(i,j,numTrials):
 			j = j - 1
 			counter += 1
 
-			if(i < 0):
-				print ("fall")
+			if(checkFall(i,j)):
 				n_counter = n_counter + 1
 				break;
 
-			elif ( (j < 0) or (i > length) or (j > length) ):
-				print ("fell")
-
-	
 
 		elif (x == 7):
 			i = i + 1
 			counter += 1
 
-			if(i < 0):
-				print ("fall")
+			if(checkFall(i,j)):
 				n_counter = n_counter + 1
 				break;
 
-			elif ( (j < 0) or (i > length) or (j > length) ):
-				print ("fell")
-
-	
 
 		elif (x == 8):
 			i = i + 1
 			j = j + 1
 			counter += 1
 
-			if(i < 0):
-				print ("fall")
+			if(checkFall(i,j)):
 				n_counter = n_counter + 1
 				break;
 
-			elif ( (j < 0) or (i > length) or (j > length) ):
-				print ("fell")
-
-	
 
 	#print "number of steps is %d\n" % counter
+
 	#returns a tuple
-
 	return counter, n_counter
-
-
-
-#====================================================================================
-
-#def probability(i,j,numTrials):
-
-
 
 
 
@@ -323,7 +272,7 @@ def runMultipleSimulations(i, j):
 
 	averages = []
 	probabilities = []
-	numTrials = 5
+	numTrials = 500
 
 	print ("i and j: %s %s" % (i,j))
 
