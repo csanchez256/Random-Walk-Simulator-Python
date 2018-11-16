@@ -1,12 +1,19 @@
+#!/usr/bin/env python
 import matplotlib.pyplot as plt
 import numpy as np
 import random
 
-#======================
+#====================================================================================
 # Christopher Sanchez 
 # CS 362 Spring 2017 
 # Homework 2
-#======================
+# NOTE: MAKE SURE YOU INSTALL MATPLOTLIB LIBRARIES
+# COMMAND: python -m pip install -U matplotlib
+# SOURCE: https://matplotlib.org/users/installing.html#installing-an-official-release
+#
+#====================================================================================
+
+#this is a test
 
 #a = np.random.random((16, 16))
 
@@ -54,7 +61,7 @@ def randomWalk(i,j):
 			j = j-1
 			counter = counter + 1
 			if( (i < 0) or (j < 0) or (i > length) or (j > length) ):
-				print "fall!\n"
+				print ("fall!\n")
 				break
 			else:
 		        	a[i][j] = 1	
@@ -63,7 +70,7 @@ def randomWalk(i,j):
 			i = i - 1
 			counter = counter + 1
 			if( i < 0 or j < 0 or i > length or j > length ):
-				print "fall!\n"
+				print ("fall!\n")
 				break
 			else:
 				a[i][j] = 1
@@ -73,7 +80,7 @@ def randomWalk(i,j):
 			j = j + 1
 			counter = counter + 1
 			if( i < 0 or j < 0 or i > length or j > length ):
-				print "fall!\n"
+				print ("fall!\n")
 				break
 			else:
 				a[i][j] = 1
@@ -82,7 +89,7 @@ def randomWalk(i,j):
 			j = j - 1
 			counter = counter + 1
 			if( i < 0 or j < 0 or i > length or j > length ):
-				print "fall!\n"
+				print ("fall!\n")
 				break
 			else:
 				a[i][j] = 1
@@ -91,7 +98,7 @@ def randomWalk(i,j):
 		elif (x == 4):
 			counter = counter + 1
 			if( i < 0 or j < 0 or i > length or j > length ):
-				print "fall!\n"
+				print ("fall!\n")
 				break
 			else:
 				a[i][j] = 1
@@ -100,7 +107,7 @@ def randomWalk(i,j):
 			j = j + 1
 			counter = counter + 1
 			if( i < 0 or j < 0 or i > length or j > length ):
-				print "fall!\n"
+				print ("fall!\n")
 				break
 			else:
 				a[i][j] = 1
@@ -110,7 +117,7 @@ def randomWalk(i,j):
 			j = j - 1
 			counter = counter + 1
 			if( i < 0 or j < 0 or i > length or j > length ):
-				print "fall!\n"
+				print ("fall!\n")
 				break
 			else:
 				a[i][j] = 1
@@ -119,7 +126,7 @@ def randomWalk(i,j):
 			i = i + 1
 			counter = counter + 1
 			if( i < 0 or j < 0 or i > length or j > length ):
-				print "fall!\n"
+				print ("fall!\n")
 				break
 			else:
 				a[i][j] = 1
@@ -129,7 +136,7 @@ def randomWalk(i,j):
 			j = j + 1
 			counter = counter + 1
 			if( i < 0 or j < 0 or i > length or j > length ):
-				print "fall!\n"
+				print ("fall!\n")
 				break
 			else:
 				a[i][j] = 1
@@ -161,12 +168,12 @@ def NorthEdge(i,j,numTrials):
 			j = j-1
 			counter = counter + 1
 			if(i < 0):
-				print "fall"
+				print ("fall")
 				n_counter = n_counter + 1
 				break;
 
 			elif ( (j < 0) or (i > length) or (j > length) ):
-				print "fell"
+				print ("fell")
 
 			else:
 		        	a[i][j] = 1
@@ -176,12 +183,12 @@ def NorthEdge(i,j,numTrials):
 			counter = counter + 1
 
 			if(i < 0):
-				print "fall"
+				print ("fall")
 				n_counter = n_counter + 1
 				break;
 
 			elif ( (j < 0) or (i > length) or (j > length) ):
-				print "fell"
+				print ("fell")
 
 			else:
 		        	a[i][j] = 1
@@ -192,12 +199,12 @@ def NorthEdge(i,j,numTrials):
 			counter = counter + 1
 
 			if(i < 0):
-				print "fall"
+				print ("fall")
 				n_counter = n_counter + 1
 				break;
 
 			elif ( (j < 0) or (i > length) or (j > length) ):
-				print "fell"
+				print ("fell")
 
 			else:
 		        	a[i][j] = 1
@@ -207,12 +214,12 @@ def NorthEdge(i,j,numTrials):
 			counter = counter + 1
 
 			if(i < 0):
-				print "fall"
+				print ("fall")
 				n_counter = n_counter + 1
 				break;
 
 			elif ( (j < 0) or (i > length) or (j > length) ):
-				print "fell"
+				print ("fell")
 
 			else:
 		        	a[i][j] = 1
@@ -222,12 +229,12 @@ def NorthEdge(i,j,numTrials):
 			counter = counter + 1
 
 			if(i < 0):
-				print "fall"
+				print ("fall")
 				n_counter = n_counter + 1
 				break;
 
 			elif ( (j < 0) or (i > length) or (j > length) ):
-				print "fell"
+				print ("fell")
 
 			else:
 		        	a[i][j] = 1
@@ -237,12 +244,12 @@ def NorthEdge(i,j,numTrials):
 			counter = counter + 1
 
 			if(i < 0):
-				print "fall"
+				print ("fall")
 				n_counter = n_counter + 1
 				break;
 
 			elif ( (j < 0) or (i > length) or (j > length) ):
-				print "fell"
+				print ("fell")
 
 			else:
 		        	a[i][j] = 1
@@ -253,12 +260,12 @@ def NorthEdge(i,j,numTrials):
 			counter = counter + 1
 
 			if(i < 0):
-				print "fall"
+				print ("fall")
 				n_counter = n_counter + 1
 				break;
 
 			elif ( (j < 0) or (i > length) or (j > length) ):
-				print "fell"
+				print ("fell")
 
 			else:
 		        	a[i][j] = 1
@@ -268,12 +275,12 @@ def NorthEdge(i,j,numTrials):
 			counter = counter + 1
 
 			if(i < 0):
-				print "fall"
+				print ("fall")
 				n_counter = n_counter + 1
 				break;
 
 			elif ( (j < 0) or (i > length) or (j > length) ):
-				print "fell"
+				print ("fell")
 
 			else:
 		        	a[i][j] = 1
@@ -284,12 +291,12 @@ def NorthEdge(i,j,numTrials):
 			counter = counter + 1
 
 			if(i < 0):
-				print "fall"
+				print ("fall")
 				n_counter = n_counter + 1
 				break;
 
 			elif ( (j < 0) or (i > length) or (j > length) ):
-				print "fell"
+				print ("fell")
 
 			else:
 		        	a[i][j] = 1
@@ -511,7 +518,7 @@ def bonusWalk(i,j):
 
 # Just a test function for hard coded values
 def bonus():
-	print 'index of bonus matrix %d\n' % bonusMatrix[2][4]
+	print ('index of bonus matrix %d\n' % bonusMatrix[2][4])
 	#bonusMatrix[2][4] = bonusWalk(2,4)
 
 	trials = 500000
@@ -519,7 +526,7 @@ def bonus():
 		bonusWalk(2,4)
 
 	for row in bonusMatrix:
-		print row
+		print(row)
 
 
 # This function is the driver. It iterates every index in the board.	
@@ -535,7 +542,7 @@ def simulation():
 			probabilityTable[i][j] = average[1] 
 
 	for row in expectedNumTable:
-		print row
+		print (row)
 
 
 # this function will run several times for each index to get an average
@@ -544,9 +551,9 @@ def runMultipleSimulations(i, j):
 
 	averages = []
 	probabilities = []
- 	numTrials = 500
+	numTrials = 500
 
-	print "i and j: %s %s" % (i,j)
+	print ("i and j: %s %s" % (i,j))
 
 	for itr in range(numTrials):
 
@@ -561,9 +568,9 @@ def runMultipleSimulations(i, j):
 	average = ( sum( int (n) for n in averages ) ) / numTrials
 	prob = (sum (float (n) for n in probabilities )) 
 
-	print 'probabilites is %d' % prob
+	print ('probabilites is %d' % prob)
 
-	print "average is %s" % average
+	print ("average is %s" % average)
 
 	return average, prob
 
