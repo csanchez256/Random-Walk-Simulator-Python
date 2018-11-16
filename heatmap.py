@@ -59,7 +59,7 @@ def randomWalk(i,j):
 		if (x == 0):
 			i = i-1
 			j = j-1
-			counter = counter + 1
+			counter += 1
 			if( (i < 0) or (j < 0) or (i > length) or (j > length) ):
 				print ("fall!\n")
 				break
@@ -68,7 +68,7 @@ def randomWalk(i,j):
 
 		elif (x == 1):
 			i = i - 1
-			counter = counter + 1
+			counter += 1
 			if( i < 0 or j < 0 or i > length or j > length ):
 				print ("fall!\n")
 				break
@@ -78,7 +78,7 @@ def randomWalk(i,j):
 		elif (x == 2):
 			i = i - 1
 			j = j + 1
-			counter = counter + 1
+			counter += 1
 			if( i < 0 or j < 0 or i > length or j > length ):
 				print ("fall!\n")
 				break
@@ -87,7 +87,7 @@ def randomWalk(i,j):
 
 		elif (x == 3):
 			j = j - 1
-			counter = counter + 1
+			counter += 1
 			if( i < 0 or j < 0 or i > length or j > length ):
 				print ("fall!\n")
 				break
@@ -96,7 +96,7 @@ def randomWalk(i,j):
 			
 
 		elif (x == 4):
-			counter = counter + 1
+			counter += 1
 			if( i < 0 or j < 0 or i > length or j > length ):
 				print ("fall!\n")
 				break
@@ -105,7 +105,7 @@ def randomWalk(i,j):
 			
 		elif (x == 5):
 			j = j + 1
-			counter = counter + 1
+			counter += 1
 			if( i < 0 or j < 0 or i > length or j > length ):
 				print ("fall!\n")
 				break
@@ -115,7 +115,7 @@ def randomWalk(i,j):
 		elif (x == 6):
 			i = i + 1
 			j = j - 1
-			counter = counter + 1
+			counter += 1
 			if( i < 0 or j < 0 or i > length or j > length ):
 				print ("fall!\n")
 				break
@@ -124,7 +124,7 @@ def randomWalk(i,j):
 
 		elif (x == 7):
 			i = i + 1
-			counter = counter + 1
+			counter += 1
 			if( i < 0 or j < 0 or i > length or j > length ):
 				print ("fall!\n")
 				break
@@ -134,7 +134,7 @@ def randomWalk(i,j):
 		elif (x == 8):
 			i = i + 1
 			j = j + 1
-			counter = counter + 1
+			counter += 1
 			if( i < 0 or j < 0 or i > length or j > length ):
 				print ("fall!\n")
 				break
@@ -166,7 +166,7 @@ def NorthEdge(i,j,numTrials):
 		if (x == 0):
 			i = i-1
 			j = j-1
-			counter = counter + 1
+			counter += 1
 			if(i < 0):
 				print ("fall")
 				n_counter = n_counter + 1
@@ -180,7 +180,7 @@ def NorthEdge(i,j,numTrials):
 
 		elif (x == 1):
 			i = i - 1
-			counter = counter + 1
+			counter += 1
 
 			if(i < 0):
 				print ("fall")
@@ -196,7 +196,7 @@ def NorthEdge(i,j,numTrials):
 		elif (x == 2):
 			i = i - 1
 			j = j + 1
-			counter = counter + 1
+			counter += 1
 
 			if(i < 0):
 				print ("fall")
@@ -211,7 +211,7 @@ def NorthEdge(i,j,numTrials):
 
 		elif (x == 3):
 			j = j - 1
-			counter = counter + 1
+			counter += 1
 
 			if(i < 0):
 				print ("fall")
@@ -226,7 +226,7 @@ def NorthEdge(i,j,numTrials):
 			
 
 		elif (x == 4):
-			counter = counter + 1
+			counter += 1
 
 			if(i < 0):
 				print ("fall")
@@ -241,7 +241,7 @@ def NorthEdge(i,j,numTrials):
 			
 		elif (x == 5):
 			j = j + 1
-			counter = counter + 1
+			counter += 1
 
 			if(i < 0):
 				print ("fall")
@@ -257,7 +257,7 @@ def NorthEdge(i,j,numTrials):
 		elif (x == 6):
 			i = i + 1
 			j = j - 1
-			counter = counter + 1
+			counter += 1
 
 			if(i < 0):
 				print ("fall")
@@ -272,7 +272,7 @@ def NorthEdge(i,j,numTrials):
 
 		elif (x == 7):
 			i = i + 1
-			counter = counter + 1
+			counter += 1
 
 			if(i < 0):
 				print ("fall")
@@ -288,7 +288,7 @@ def NorthEdge(i,j,numTrials):
 		elif (x == 8):
 			i = i + 1
 			j = j + 1
-			counter = counter + 1
+			counter += 1
 
 			if(i < 0):
 				print ("fall")
@@ -328,7 +328,7 @@ def bonusWalk(i,j):
 		if (x == 0):
 			i = i-1
 			j = j-1
-			counter = counter + 1
+			counter += 1
 			if (i < 0):
 				i = i+1
 				stop = True
@@ -348,7 +348,7 @@ def bonusWalk(i,j):
 
 		elif (x == 1):
 			i = i - 1
-			counter = counter + 1
+			counter += 1
 			if (i < 0):
 				i = i+1
 				stop = True
@@ -370,7 +370,7 @@ def bonusWalk(i,j):
 		elif (x == 2):
 			i = i - 1
 			j = j + 1
-			counter = counter + 1
+			counter += 1
 			if (i < 0):
 				i = i+1
 				stop = True
@@ -391,7 +391,7 @@ def bonusWalk(i,j):
 
 		elif (x == 3):
 			j = j - 1
-			counter = counter + 1
+			counter += 1
 			if (i < 0):
 				i = i+1
 				stop = True
@@ -411,7 +411,7 @@ def bonusWalk(i,j):
 			
 
 		elif (x == 4):
-			counter = counter + 1
+			counter += 1
 			if (i < 0):
 				i = i+1
 				stop = True
@@ -432,7 +432,7 @@ def bonusWalk(i,j):
 			
 		elif (x == 5):
 			j = j + 1
-			counter = counter + 1
+			counter += 1
 			if (i < 0):
 				i = i+1
 				stop = True
@@ -454,7 +454,7 @@ def bonusWalk(i,j):
 		elif (x == 6):
 			i = i + 1
 			j = j - 1
-			counter = counter + 1
+			counter += 1
 			if (i < 0):
 				i = i+1
 				stop = True
@@ -475,7 +475,7 @@ def bonusWalk(i,j):
 
 		elif (x == 7):
 			i = i + 1
-			counter = counter + 1
+			counter += 1
 			if (i < 0):
 				i = i+1
 				stop = True
@@ -497,7 +497,7 @@ def bonusWalk(i,j):
 		elif (x == 8):
 			i = i + 1
 			j = j + 1
-			counter = counter + 1
+			counter += 1
 			if (i < 0):
 				i = i+1
 				stop = True
@@ -521,7 +521,7 @@ def bonus():
 	print ('index of bonus matrix %d\n' % bonusMatrix[2][4])
 	#bonusMatrix[2][4] = bonusWalk(2,4)
 
-	trials = 500000
+	trials = 50
 	for itr in range (trials):
 		bonusWalk(2,4)
 
@@ -551,7 +551,7 @@ def runMultipleSimulations(i, j):
 
 	averages = []
 	probabilities = []
-	numTrials = 500
+	numTrials = 5
 
 	print ("i and j: %s %s" % (i,j))
 
